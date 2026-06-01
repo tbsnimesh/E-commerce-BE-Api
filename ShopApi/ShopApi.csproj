@@ -10,4 +10,17 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Api\Endpoints\" />
+    <Folder Include="Api\DTOs\" />
+    <Folder Include="Api\Mapping\" />
+    <Folder Include="Api\Validators\" />
+    <Folder Include="Data\Configuration\" />
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="Infrastructure\ExceptionHandling\" />
+    <Folder Include="Infrastructure\Logging\" />
+    <Folder Include="Infrastructure\Auth\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

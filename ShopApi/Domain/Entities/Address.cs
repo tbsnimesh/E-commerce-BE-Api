@@ -1,16 +1,18 @@
 ﻿namespace ShopApi.Domain.Entities
 {
-    public class Address
+    public class Address : ISoftDeletable
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Street { get; set; } = string.Empty;
         public string City { get; set; } = string.Empty;
         public string State { get; set; } = string.Empty;
         public string PostalCode { get; set; } = string.Empty;
         public string Country { get; set; } = string.Empty;
         public bool IsDefault { get; set; }
+        public bool IsDeleted { get; set; }
+        public DateTime? DeletedAt { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User User { get; set; } = null!;
     }
 }

@@ -1,10 +1,12 @@
-﻿namespace ShopApi.Domain.Entities
+﻿using ShopApi.Domain.Enums;
+
+namespace ShopApi.Domain.Entities
 {
     public class Order
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
-        public string Status { get; set; } = "Pending";
+        public OrderStatus Status { get; set; } = OrderStatus.Pending;
         public decimal TotalAmount { get; set; }
 
         public string ShippingStreet { get; set; } = string.Empty;
@@ -13,7 +15,7 @@
         public string ShippingPostalCode { get; set; } = string.Empty;
         public string ShippingCountry { get; set; } = string.Empty;
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User User { get; set; } = null!;
 
         public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

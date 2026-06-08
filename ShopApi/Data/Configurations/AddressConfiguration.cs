@@ -32,16 +32,12 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
                .IsRequired()
                .HasMaxLength(100);
 
-        builder.Property(a => a.IsDefault)
-                
+        builder.Property(a => a.IsDefault)                
                .HasDefaultValue(false);
 
         // Soft delete
         builder.Property(a => a.IsDeleted)
-               
                .HasDefaultValue(false);
-
-    
 
         builder.HasQueryFilter(a => !a.IsDeleted);
 

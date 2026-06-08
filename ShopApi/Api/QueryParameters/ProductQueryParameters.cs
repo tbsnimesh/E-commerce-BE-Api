@@ -4,6 +4,6 @@ namespace ShopApi.Api.QueryParameters
     {
         public decimal? MinPrice { get; set; }
         public decimal? MaxPrice { get; set; }
-        public int? CategoryId { get; set; }
+        public Guid? CategoryId { get; set; }
     }
 }
